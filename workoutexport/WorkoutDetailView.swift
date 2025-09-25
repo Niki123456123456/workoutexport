@@ -163,9 +163,11 @@ func generateGPX(from locations: [CLLocation]) -> String {
         let lat = loc.coordinate.latitude
         let lon = loc.coordinate.longitude
         let time = isoFormatter.string(from: loc.timestamp)
+        let ele = loc.altitude         // Altitude in meters
 
         gpx += """
             <trkpt lat="\(lat)" lon="\(lon)">
+              <ele>\(ele)</ele>
               <time>\(time)</time>
             </trkpt>
         """
