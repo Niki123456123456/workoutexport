@@ -10,9 +10,22 @@
 		2CDD7CF42D28402F0052E675 /* workoutexport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workoutexport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2CB8921E2E85D71500092BDC /* Exceptions for "workoutexport" folder in "workoutexport" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2CDD7CF32D28402F0052E675 /* workoutexport */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2CDD7CF62D28402F0052E675 /* workoutexport */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2CB8921E2E85D71500092BDC /* Exceptions for "workoutexport" folder in "workoutexport" target */,
+			);
 			path = workoutexport;
 			sourceTree = "<group>";
 		};
@@ -256,6 +269,7 @@
 				DEVELOPMENT_TEAM = JKD484739B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = workoutexport/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app wants to read your health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -287,6 +301,7 @@
 				DEVELOPMENT_TEAM = JKD484739B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = workoutexport/Info.plist;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app wants to read your health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

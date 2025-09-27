@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WorkoutExport – App Support</title>
+  <meta name="description" content="Support page for the iOS app WorkoutExport. Help, FAQ, troubleshooting, and contact information." />
+  <link rel="canonical" href="https://example.com/workoutexport-support" />
+  <meta property="og:title" content="WorkoutExport – App Support" />
+  <meta property="og:description" content="Help, FAQ, troubleshooting, and contact information for WorkoutExport on iOS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/workoutexport-support" />
+  <meta name="theme-color" content="#111827" />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121826;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-strong: #3b82f6;
+      --ring: rgba(59,130,246,.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --accent-strong: #1d4ed8;
+        --ring: rgba(37, 99, 235, .25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg); color: var(--text); line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+    header {
+      position: sticky; top: 0; backdrop-filter: saturate(180%) blur(10px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+      z-index: 10;
+    }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo {
+      width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      display:grid; place-items:center; color:white; font-weight:700;
+      box-shadow: 0 8px 30px var(--ring);
+    }
+    nav { display:flex; gap:16px; flex-wrap: wrap; }
+    nav a { padding: 8px 12px; border-radius: 999px; }
+    nav a:hover { background: color-mix(in oklab, var(--accent) 15%, transparent); text-decoration: none; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 800px) { .grid { grid-template-columns: 1.2fr .8fr; } }
+    .card {
+      background: var(--card); border: 1px solid color-mix(in oklab, var(--text) 10%, transparent);
+      border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px -20px var(--ring);
+    }
+    h1 { font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem); margin: 16px 0 8px; }
+    h2 { font-size: 1.3rem; margin: 0 0 8px; }
+    h3 { font-size: 1.1rem; margin: 16px 0 8px; }
+    .muted { color: var(--muted); }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background: color-mix(in oklab, var(--accent) 12%, transparent); border:1px solid color-mix(in oklab, var(--accent) 35%, transparent); }
+    .kpi { display:flex; gap:16px; flex-wrap:wrap; }
+    .kpi div { background: var(--card); border: 1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius:12px; padding:12px 14px; }
+    .faq details { border: 1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius: 12px; padding: 12px 14px; background: color-mix(in oklab, var(--card) 90%, black 10%); }
+    .faq details + details { margin-top: 10px; }
+    details summary { cursor: pointer; font-weight: 600; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    .btn { display:inline-block; padding:10px 14px; border-radius: 10px; border:1px solid color-mix(in oklab, var(--accent) 40%, transparent); background: color-mix(in oklab, var(--accent) 12%, transparent); font-weight: 600; }
+    .btn:hover { background: color-mix(in oklab, var(--accent) 18%, transparent); text-decoration:none; }
+    footer { margin-top: 40px; padding: 24px 0; border-top: 1px solid color-mix(in oklab, var(--text) 10%, transparent); }
+    .skip-link { position:absolute; left:-9999px; }
+    .skip-link:focus { left: 16px; top: 16px; background: var(--accent-strong); color:white; padding:8px 12px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+      <div class="brand" aria-label="WorkoutExport">
+        <div>
+          <strong>WorkoutExport</strong>
+          <div class="muted" style="font-size:.9rem;">App Support</div>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+      <section class="card" aria-labelledby="intro-title">
+        <span class="pill" title="Platform">iOS Support</span>
+        <h1 id="intro-title">Welcome to WorkoutExport Support</h1>
+        <p>
+          Thanks for using <strong>WorkoutExport</strong>! This page provides help, answers to common questions, and ways to contact the developer.
+        </p>
+        <div class="kpi" aria-label="Quick links">
+          <div><a class="btn" href="https://github.com/Niki123456123456/workoutexport" target="_blank" rel="noopener">GitHub Repository</a></div>
+          <div><a class="btn" href="#contact">Contact Support</a></div>
+        </div>
+        <h3>What the app does</h3>
+        <p>
+          WorkoutExport helps you export workout data from your device and share or back it up. (Edit this paragraph to describe your app precisely.)
+        </p>
+      </section>
+
+    <section id="troubleshooting" class="card" aria-labelledby="troubleshoot-title">
+      <h2 id="troubleshoot-title">Troubleshooting</h2>
+      <ol>
+        <li><strong>Restart the app</strong>: swipe up from the bottom, close the app, then reopen.</li>
+        <li><strong>Check permissions</strong>: ensure Health access and Files access are granted if needed.</li>
+        <li><strong>Free storage</strong>: large exports require free storage space. Remove unused files/apps.</li>
+        <li><strong>Try a smaller export</strong>: export fewer workouts to test.</li>
+        <li><strong>Contact support</strong> if the issue persists (include logs or screenshots if possible).
+        </li>
+      </ol>
+      <p class="muted">Tip: Reinstalling the app can fix corrupted installs.</p>
+    </section>
+
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>If you need help, have questions, or want to report a problem:</p>
+      <ul>
+        <li>GitHub: <a href="https://github.com/Niki123456123456/workoutexport" target="_blank" rel="noopener">Repository</a> · <a href="https://github.com/Niki123456123456/workoutexport/issues" target="_blank" rel="noopener">Issues</a></li>
+      </ul>
+    </section>
+
+    <section id="privacy" class="card" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacy Policy</h2>
+      <h3>Data Collection</h3>
+      <p>WorkoutExport does not collect personal data on its own servers. The app may request access to Apple Health to read workouts for export. Health data access happens locally on your device and is used only to perform the requested export.</p>
+      <h3>Data Sharing</h3>
+      <p>The app does not transmit your data to the developer or third parties unless you explicitly choose to export/share it using iOS share destinations (e.g., Files, iCloud Drive, Mail).</p>
+      <h3>Analytics & Crash Reporting</h3>
+      <p>No third‑party analytics or crash reporting is used. (Update this if you add any.)</p>
+    </section>
+  </main>
+
+  <script>
+    // Update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
