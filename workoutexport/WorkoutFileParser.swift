@@ -6,11 +6,33 @@ import UIKit
 
 enum WorkoutFileParser {
     static func parseGPX(url: URL) -> [CLLocation] {
-        guard let parser = XMLParser(contentsOf: url) else { return [] }
-        let delegate = GPXDelegate()
-        parser.delegate = delegate
-        parser.parse()
-        return delegate.locations
+        if url.startAccessingSecurityScopedResource() {
+            defer { url.stopAccessingSecurityScopedResource() }
+        do {
+            let data = try Data(contentsOf: url)
+            let parser = XMLParser(data: data)
+            
+            let delegate = GPXDelegate()
+            parser.delegate = delegate
+            let success = parser.parse()
+               if !success {
+                   if let error = parser.parserError {
+                       print("Parsing failed: \(error.localizedDescription)")
+                   } else {
+                       print("Parsing failed with unknown error")
+                   }
+                   return []
+               }
+            return delegate.locations
+            
+        } catch {
+            print("❌ Failed to load data from URL: \(url)")
+            print("Error: \(error.localizedDescription)")
+            return []
+        } } else {
+            print("❌ Could not access security-scoped resource: \(url)")
+            return []
+        }
     }
 
     private class GPXDelegate: NSObject, XMLParserDelegate {
@@ -27,6 +49,12 @@ enum WorkoutFileParser {
             f.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
             return f
         }()
+        
+        func parser(_ parser: XMLParser, didStartElement elementName: String,
+                    namespaceURI: String?, qualifiedName qName: String?,
+                    attributes attributeDict: [String : String] = [:]) -> Bool {
+            return true
+        }
 
         func parser(_ parser: XMLParser,
                     didStartElement elementName: String,
