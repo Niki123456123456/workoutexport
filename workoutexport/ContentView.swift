@@ -54,6 +54,13 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Workouts")
+            .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                NavigationLink(destination: ImportWorkoutView(healthStore: healthStore)) {
+                                    Label("Import", systemImage: "plus.circle")
+                                }
+                            }
+                        }
             .onAppear {
                 fetchWorkouts { fetchedWorkouts in
                     DispatchQueue.main.async {
